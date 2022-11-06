@@ -13,5 +13,11 @@ return {
       require "custom.plugins.configs.lspconfig"
     end,
   },
-  ["p00f/clangd_extensions.nvim"] = {}
+  ["p00f/clangd_extensions.nvim"] = {},
+  ["jose-elias-alvarez/null-ls.nvim"] = {
+      after = "nvim-lspconfig",
+      config = function()
+         require "custom.plugins.configs.null-ls"
+      end,
+ },
 }
