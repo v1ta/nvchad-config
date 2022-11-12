@@ -20,4 +20,5 @@ return {
          require "custom.plugins.configs.null-ls"
       end,
  },
+ ["Pocco81/auto-save.nvim"] = {},
 }
