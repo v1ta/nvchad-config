@@ -1,7 +1,7 @@
 local M = {}
 
 M.nvterm = {
- t = {
+  t = {
     -- toggle in terminal mode
     ["<A-i>"] = {
       function()
@@ -23,7 +23,7 @@ M.nvterm = {
       end,
       "toggle vertical term",
     },
-    ["<ESC><ESC>"] = { "<C-\\><C-n>", "go to normal mode in terminal"},
+    ["<ESC><ESC>"] = { "<C-\\><C-n>", "go to normal mode in terminal" },
   },
 
   n = {
@@ -47,8 +47,31 @@ M.nvterm = {
         require("nvterm.terminal").toggle "vertical"
       end,
       "toggle vertical term",
-    }
-  }
+    },
+  },
+}
+
+M.general = {
+  n = {
+    ["<S-h>"] = {
+      function()
+        require("nvchad_ui.tabufline").tabuflinePrev()
+      end,
+      "goto next buffer",
+    },
+    ["<S-l>"] = {
+      function()
+        require("nvchad_ui.tabufline").tabuflineNext()
+      end,
+      "goto next buffer",
+    },
+    ["<leader>y"] = { '"*y', "yank to system clipboard" },
+    ["<leader>p"] = { '"*p', "paste from system clipboard" },
+  },
+  v = {
+    ["<leader>y"] = { '"*y', "yank to system clipboard" },
+    ["<leader>p"] = { '"*p', "paste from system clipboard" },
+  },
 }
 
 return M
