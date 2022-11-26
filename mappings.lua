@@ -67,6 +67,10 @@ M.general = {
     },
     ["<leader>y"] = { '"*y', "yank to system clipboard" },
     ["<leader>p"] = { '"*p', "paste from system clipboard" },
+    ["<C-Up>"] = {"<cmd> :resize -2<CR>", "grow window size up"},
+    ["<C-Down>"] = {"<cmd> :resize +2<CR>", "grow window size down"},
+    ["<C-Left>"] = {"<cmd> :vertical resize -2<CR>", "grow window size left"},
+    ["<C-Right>"] = {"<cmd> :vertical resize +2<CR>", "grow window size right"},
   },
   v = {
     ["<leader>y"] = { '"*y', "yank to system clipboard" },
