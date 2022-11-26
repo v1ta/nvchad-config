@@ -21,5 +21,4 @@ return {
       end,
  },
  ["Pocco81/auto-save.nvim"] = {},
- ["karb94/neoscroll.nvim"] = {},
 }
