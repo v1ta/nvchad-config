@@ -67,14 +67,34 @@ M.general = {
     },
     ["<leader>y"] = { '"*y', "yank to system clipboard" },
     ["<leader>p"] = { '"*p', "paste from system clipboard" },
-    ["<C-Up>"] = {"<cmd> :resize -2<CR>", "grow window size up"},
-    ["<C-Down>"] = {"<cmd> :resize +2<CR>", "grow window size down"},
-    ["<C-Left>"] = {"<cmd> :vertical resize -2<CR>", "grow window size left"},
-    ["<C-Right>"] = {"<cmd> :vertical resize +2<CR>", "grow window size right"},
+    ["<C-Up>"] = { "<cmd> :resize -2<CR>", "grow window size up" },
+    ["<C-Down>"] = { "<cmd> :resize +2<CR>", "grow window size down" },
+    ["<C-Left>"] = { "<cmd> :vertical resize -2<CR>", "grow window size left" },
+    ["<C-Right>"] = { "<cmd> :vertical resize +2<CR>", "grow window size right" },
   },
   v = {
     ["<leader>y"] = { '"*y', "yank to system clipboard" },
     ["<leader>p"] = { '"*p', "paste from system clipboard" },
+  },
+}
+
+M.dap = {
+  n = {
+    ["<leader>db"] = {
+      function()
+        require("dap").toggle_breakpoint()
+      end,
+    },
+    ["<leader>dc"] = {
+      function()
+        require("dap").continue()
+      end,
+    },
+    ["<leader>dg"] = {
+      function()
+        require("dapui").toggle()
+      end,
+    },
   },
 }
 
