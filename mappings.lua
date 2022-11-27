@@ -95,6 +95,21 @@ M.dap = {
         require("dapui").toggle()
       end,
     },
+    ["<leader>s"] = {
+      function()
+        require("dap").step_over()
+      end,
+    },
+    ["<leader>si"] = {
+      function()
+        require("dap").step_into()
+      end,
+    },
+    ["<leader>so"] = {
+      function()
+        require("dap").step_out()
+      end,
+    },
   },
 }
 
