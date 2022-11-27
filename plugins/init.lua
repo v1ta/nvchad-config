@@ -21,4 +21,16 @@ return {
       end,
  },
  ["Pocco81/auto-save.nvim"] = {},
+ ["mfussenegger/nvim-dap"] = {
+    after = "nvim-lspconfig",
+    config = function()
+      require "custom.plugins.configs.nvim-dap"
+    end,
+  },
+  ["rcarriga/nvim-dap-ui"] = {
+    after = "nvim-dap",
+    config = function()
+      require "custom.plugins.configs.nvim-dap-gui"
+    end,
+  },
 }
