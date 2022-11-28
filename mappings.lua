@@ -110,6 +110,11 @@ M.dap = {
         require("dap").step_out()
       end,
     },
+    ["<leader>dx"] = {
+      function()
+        require("dap").terminate()
+      end,
+    },
   },
 }
 
