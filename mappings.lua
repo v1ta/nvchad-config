@@ -84,36 +84,43 @@ M.dap = {
       function()
         require("dap").toggle_breakpoint()
       end,
+      "Add a breakpoint at the cursor",
     },
     ["<leader>dc"] = {
       function()
         require("dap").continue()
       end,
+      "Start the debugger or continue to the next breakpoint",
     },
     ["<leader>dg"] = {
       function()
         require("dapui").toggle()
       end,
+      "toggle the debugger UI",
     },
     ["<leader>s"] = {
       function()
         require("dap").step_over()
       end,
+      "while in debug, step over the current line",
     },
     ["<leader>si"] = {
       function()
         require("dap").step_into()
       end,
+      "while in debug, step into the current line",
     },
     ["<leader>so"] = {
       function()
         require("dap").step_out()
       end,
+      "while in debug, step out of the current line",
     },
     ["<leader>dx"] = {
       function()
         require("dap").terminate()
       end,
+      "terminate the current debug sessions",
     },
   },
 }
