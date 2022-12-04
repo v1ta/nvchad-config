@@ -4,8 +4,8 @@ return {
   },
   ["williamboman/mason.nvim"] = {
     override_options = {
-      ensure_installed = { "clangd" }
-    }
+      ensure_installed = { "clangd" },
+    },
   },
   ["neovim/nvim-lspconfig"] = {
     config = function()
@@ -15,13 +15,13 @@ return {
   },
   ["p00f/clangd_extensions.nvim"] = {},
   ["jose-elias-alvarez/null-ls.nvim"] = {
-      after = "nvim-lspconfig",
-      config = function()
-         require "custom.plugins.configs.null-ls"
-      end,
- },
- ["Pocco81/auto-save.nvim"] = {},
- ["mfussenegger/nvim-dap"] = {
+    after = "nvim-lspconfig",
+    config = function()
+      require "custom.plugins.configs.null-ls"
+    end,
+  },
+  ["Pocco81/auto-save.nvim"] = {},
+  ["mfussenegger/nvim-dap"] = {
     after = "nvim-lspconfig",
     config = function()
       require "custom.plugins.configs.nvim-dap"
@@ -31,6 +31,15 @@ return {
     after = "nvim-dap",
     config = function()
       require "custom.plugins.configs.nvim-dap-gui"
+    end,
+  },
+  ["kevinhwang91/promise-async"] = {
+    after = "nvim-lspconfig"
+  },
+  ["kevinhwang91/nvim-ufo"] = {
+    after = "promise-async",
+    config = function()
+      require "custom.plugins.configs.nvim-ufo"
     end,
   },
 }
