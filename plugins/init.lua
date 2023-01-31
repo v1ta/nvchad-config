@@ -33,13 +33,4 @@ return {
       require "custom.plugins.configs.nvim-dap-gui"
     end,
   },
-  ["kevinhwang91/promise-async"] = {
-    after = "nvim-lspconfig"
-  },
-  ["kevinhwang91/nvim-ufo"] = {
-    after = "promise-async",
-    config = function()
-      require "custom.plugins.configs.nvim-ufo"
-    end,
-  },
 }
