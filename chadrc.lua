@@ -3,7 +3,7 @@
 local M = {}
 
 M.ui = {
-  theme = "vscode_dark",
+  theme = "tokyodark",
 }
 
 M.mappings = require "custom.mappings"

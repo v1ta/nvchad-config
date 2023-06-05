@@ -18,12 +18,14 @@ require("clangd_extensions").setup {
   },
 }
 
-lspconfig.cmake.setup {
-  on_attach = lsp_core.on_attach,
-  capabilities = lsp_core.capabilities,
-}
 
-lspconfig.bashls.setup {
-  on_attach = lsp_core.on_attach,
-  capabilities = lsp_core.capabilities,
-}
+
+-- lspconfig.cmake.setup {
+--   on_attach = lsp_core.on_attach,
+--   capabilities = lsp_core.capabilities,
+-- }
+--
+-- lspconfig.bashls.setup {
+--   on_attach = lsp_core.on_attach,
+--   capabilities = lsp_core.capabilities,
+-- }

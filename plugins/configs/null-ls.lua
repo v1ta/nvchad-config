@@ -25,7 +25,7 @@ local sources = {
 -- TODO fix thix?
 -- hack to remove the offset warning, it doesn't seem to cause any issues as far as I can tell
 local notify = vim.notify
-vim.notify = function(msg, ...)
+notify = function(msg, ...)
     if msg:match("warning: multiple different client offset_encodings") then
         return
     end
